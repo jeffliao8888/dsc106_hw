@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v5.js"></script>
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+<head>
+
+</head>
+<body>
+    <script>
+        var width = 450
+            height = 450
+            margin = 40
+        var radius = Math.min(width, height) / 2 - margin
+        // append the svg object to the body of the page
+        var svg = d3.select("#my_dataviz")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        
+        svg.append("text")
+            .attr("x", (width / 20))             
+            .attr("y", height/ 2)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "16px") 
+            .text("Year vs Fulltime_Men_Admitted");
+
+        
+        
+        var data = {2018: 13781,
+                    2017: 13981,
+                    2016: 14103,
+                    2015: 12748,
+                    2014: 11758,
+                    2013: 11866,
+                    2012: 10917,
+                    2011: 8707,
+                    2010: 8365,
+                    2009: 7816,
+                    2008: 8517,
+                    2007: 8419,
+                    2006: 9210,
+                    2005: 7580}
+        
+
+        var color = d3.scaleOrdinal()
+            .domain(data)
+            .range(d3.schemeSet2);
+
+        // Compute the position of each group on the pie:
+        var pie = d3.pie()
+            .value(function(d) {return d.value; })
+        var data_ready = pie(d3.entries(data))
+        
+        var arcGenerator = d3.arc()
+            .innerRadius(125)
+            .outerRadius(radius)
+
+        // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+        svg
+            .selectAll('whatever')
+            .data(data_ready)
+            .enter()
+            .append('path')
+            .attr('d', d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius)
+            )
+            .attr('fill', function(d){ return(color(d.data.key)) })
+            .attr("stroke", "black")
+            .style("stroke-width", "2px")
+            .style("opacity", 0.7)
+        svg
+            .selectAll('mySlices')
+            .data(data_ready)
+            .enter()
+            .append('text')
+            .text(function(d){ return d.data.key})
+            .attr("transform", function(d) { return "translate(" + arcGenerator.centroid(d) + ")";  })
+            //.style("text-anchor", "middle")
+            .style("font-size", 17)
+    </script>
+</body>
