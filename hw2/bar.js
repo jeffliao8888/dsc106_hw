@@ -1,6 +1,6 @@
 var i;
 
-d3.csv("/data/daily_sales.csv").then(function(data) {
+d3.csv("./data/daily_sales.csv").then(function(data) {
     create_bar_C(data);
     create_bar_F(data);
     create_bar_H(data);

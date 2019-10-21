@@ -1,6 +1,6 @@
 var i;
 
-d3.csv("/data/monthly_sales.csv").then(function(data) {
+d3.csv("./data/monthly_sales.csv").then(function(data) {
     create_line_C(data);
     create_line_NE(data);
     create_line_SE(data);
