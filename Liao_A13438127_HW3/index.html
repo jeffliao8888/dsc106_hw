@@ -1,0 +1,80 @@
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="assets/jquery-3.4.1.min.js"></script>
+    <script src="assets/p5.js"></script>
+    <script src="main.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+    <title>Springfield Engery</title>
+    <img id="simpson" src="assets/simpson.png">
+</head>
+<body>
+    <h1>Springfield Energy Dashboard</h1>
+    <div id="container">
+        <div id="topRight"></div>
+        <div id="bottomRight1"></div>
+        <div id="bottomRight2"></div>
+        <div id="topLeft"></div>
+        <div id="bottomLeft1"></div>
+        <div id="bottomLeft2"></div>
+    </div>
+
+    <button id="change_chart", onclick="myFunction()"">Change charts</button>
+
+    <table id="reporting", border="1">
+        <tr>
+            <th>Sources</th>
+            <th>Power MW</th>
+            <th>Contribution  to demand</th>
+            <th>Av.Value $/MWh</th>
+        </tr>
+        <tr>
+            <td>Coal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Solar</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Exports</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Hydro</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Wind</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Pumps</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Gas</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Distillate</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Net</td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+</html>

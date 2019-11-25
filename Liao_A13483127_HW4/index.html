@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script type='text/javascript' src="main.js"></script>
+    </head>
+    <body>
+        <a href="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg">
+            <img id="rdj1" src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg">
+        </a>
+        <h1>Insight into Robert Downey Jr</h1>
+        <br>
+        <hr>
+        <p>
+            Data collection - The data was obtained by scraping information off of IMDB pro, which is a subscription
+            service, or wikipedia. Before scraping, I checked whether the website allowed scraping.
+            Web scraping was handeled in an ethically and professional manner. After scraping data from the internet,
+            data was loaded into Jupyter notebook for further data cleaning. Data was prepared so that it would be easier
+            to use with data visualization tools.
+        </p>
+
+        <h2>Word Cloud</h2>
+        <p>
+            Insight: 
+            We can confirm that Robert Downey Jr's successful acting career is because of the Marvel moveis that he 
+            has acted in. We can see this because from the chart below, the bigger texts are all Marvel movies.
+
+        </p>
+        <p>
+            Why word cloud? At first I wanted to make a world cloud with the quotes from Robert Downey Jr.
+            After trying it a few times, the chart doesn't give a lot of information. I also tried using a phrase
+            cloud, but that doesn't give a lot of information too. This is because there isn't enough data.
+            I later gathered box office earnings and titles of the movies that Robert Downey Jr. has acted.
+            Word clouds are usually a kind of visualization that shows the frequncy a word shows up in a document
+            and are used to help visualize sentiment analysis. However, in this chart I have the size of a movie
+            title represent the total earnings made. Furthermore, each title is color coded by whether it is a Marvel
+            movie or not.
+        </p>
+        <p>Technical remarks:</p>
+        <ul>
+            <li>
+                Priming - I wanted to show that Marvel movies earned more than non-Marvel moveis so Marvel
+                movies are colored green and non-Marvel movies are colored red. This is due to the same convention
+                as the stock market.
+            </li>
+            <li>
+                Legend - The legend tells whether the movie is a Marvel movie or not, i.e. green or 1 for Marvel 
+                movies and red or 0 for non_Marvel movies.
+            </li>
+            <li>
+                Hovering over movie titles - When you hover over the movie titles, a tooltip will show up.
+                It tells the user more information such as movie title, is it a Marvel film, and its gross income.
+                The information may be redundant, but it is there to help people who can't see the smaller words
+                or are having a hard time differentiating the colors apart.
+            </li> 
+        </ul>
+        <div class='tableauPlaceholder' id='viz1574634472877' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;Wordcloud_15746312392040&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+                <object class='tableauViz' width=100% height=100% style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> 
+                    <param name='site_root' value='' />
+                    <param name='name' value='Wordcloud_15746312392040&#47;Sheet1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yesy\' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;Wordcloud_15746312392040&#47;Sheet1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1574634472877');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height='100%';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        
+        <p>Source: <a href="https://pro.imdb.com/name/nm0000375/filmography">Films</a></p>
+
+        <hr>
+        <h2>Tree map</h2>
+        <p>
+            Insight: We can see that Robert Downey Jr. is, unsurprisingly, most popular in North America. 
+            However, he also seems to be very popular in Asia and Europe respectively.
+            This conclusion is made with the assumtion that a larger box office indicates an actors popularoty. 
+            This assumtion may need further investigation, but the logica makes sense because a lot of people may
+            choose to watch a movie because of the movie's cast. 
+        </p>
+        <p>
+            Why a treemap? Trying to figure where a person was popular based on the amount of box
+            office is would intuitively lead to a bubble map chart, where there would be a bubble on each country
+            and the bubble size would be determined by the box office. However, after trying this chart, I decided
+            that it was not very appropriate as there wasn't a complete data set with all the countries. This would
+            leaves a lot of empty space. I tried a tree map and though it looked better and more concise. 
+        </p>
+        <p>Technical Details</p>
+        <ul>
+            <li>Color usage - Each color represents a different continent. More details can be seen in the legend.</li>
+            <li>
+                Hovering over country names gives the user more information about the country name, continent, and
+                gross box office. Although there may be some redundant information, the pop up tool is helpful when
+                trying to get more information about countries in smaller boxes where no names are displayed.
+            </li>
+        </ul>
+
+        <div class='tableauPlaceholder' id='viz1574641985612' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;tr&#47;treemap_15746339746110&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+                <object class='tableauViz' width=100% height=100% style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='treemap_15746339746110&#47;Sheet1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='no' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;tr&#47;treemap_15746339746110&#47;Sheet1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>                
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1574641985612');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height='100%';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        
+        <p>Source: <a href="https://pro.imdb.com/name/nm0000375/boxoffice">Box Office by regions</a></p>
+
+        <hr>
+
+
+
+
+        <h2>Network Map</h2>
+
+        <p>
+            Insight: Given an actor or actress, users would tend to also view other actors or actresses who have stared in 
+            similar themed films. For example, given that a user loked up Robert Downey Jr, who has stared in multiple Marvel
+            films, other users also looked up other stars who have stared in Marvel films.
+        </p>
+        <p>
+            Why a network map? I want to figure out if there is a relationship betweenRobert Downey Jr. and other actors and actresses
+            that other useres have looked up. It would make sense to use a network graph because we want to see relationships between
+            people. Here, only the top 10 most related people that were displayed due to Miller's law, where a chart should have 5 plus or
+            minus objects only. 
+        </p>
+        <p>Technical Details</p>
+        <ul>
+            <li>Size - The size of each point at the bottome represents how strongly the actor and Robert Downey Jr was
+                connected. Each of the points chosen represents an actor or actress that another user also viewed given 
+                that the user already viewed Robery Downey Jr's profile. For example, more people also Chris Evans given
+                that they already viewed Robery Downey Jr.
+            </li>
+            <li>
+                Hovering over the points shows a tooltip that contains the actors name. While at times, the chart
+                already displays the actors and actress's names, this may not be the case when the window size changes.
+                So, it is important to take into account when the the window sizes change.
+            </li>
+        </ul>
+
+        <div class='tableauPlaceholder' id='viz1574642259380' style='position: relative'>
+            <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;Network_15746301732730&#47;network&#47;1_rss.png' style='border: none' /></a></noscript>
+            <object class='tableauViz' width=100% height=100% style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='Network_15746301732730&#47;network' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='no' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;Network_15746301732730&#47;network&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1574642259380');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='100%';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+        <p>Source: <a href="https://pro.imdb.com/name/nm0000375/people_also_viewed?ref_=nm_pav_see_more&subpage=boxoffice">People Also Viewed</a></p>
+        <br>
+    </body>
+
+</html>

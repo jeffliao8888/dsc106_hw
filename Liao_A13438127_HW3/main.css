@@ -1,0 +1,79 @@
+body {
+    background-color: #ece9e6;
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 80px;
+    float: left;
+}
+
+#reporting { 
+    position: absolute; 
+    right: 3%;
+    top: 6%; 
+    width: 26%; 
+    height: 40%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;  */
+    font-size: 24px; 
+    text-align: center; 
+  }
+
+#topLeft { 
+    position: absolute; 
+    left: 1%;
+    top: 9%; 
+    width: 70%; 
+    height: 43%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;  */
+}
+
+#bottomRight1 { 
+    position: absolute; 
+    right: 2%; 
+    bottom: 2%; 
+    width: 25%; 
+    height: 40%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;  */
+    pointer-events: none;
+}
+
+#bottomRight2 { 
+    position: absolute; 
+    right: 2%; 
+    bottom: 2%; 
+    width: 25%; 
+    height: 40%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;  */
+    pointer-events: none;
+}
+
+#change_chart{ 
+    position: absolute; 
+    right: 13%; 
+    bottom: 43%; 
+}
+
+#bottomLeft1 { 
+    position: absolute; 
+    left: 1%; 
+    bottom: 25%; 
+    width: 70%; 
+    height: 23%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;  */
+}
+#bottomLeft2 { 
+    position: absolute; 
+    left: 1%; 
+    bottom: 2%; 
+    width: 70%; 
+    height: 23%; 
+    background-color: #ece9e6; 
+    /* border: solid 3px #78e382;   */
+}
